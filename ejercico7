@@ -1,0 +1,23 @@
+def transformar_paso_a_paso(texto, lista_opciones):
+    resultado = texto
+
+    for opcion in lista_opciones:
+        if opcion == 1:
+            resultado = resultado.upper()
+        elif opcion == 2:
+            resultado = resultado.lower()
+        elif opcion == 3:
+            resultado = resultado[::-1]
+
+    return resultado
+
+
+mi_texto = "papas sin salsa no son ricas"
+
+mis_pasos = [1, 3]
+
+resultado_final = transformar_paso_a_paso(mi_texto, mis_pasos)
+
+print(f"Texto original: {mi_texto}")
+print(f"Pasos aplicados: {mis_pasos}")
+print(f"Resultado final: {resultado_final}")
