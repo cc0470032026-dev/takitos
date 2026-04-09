@@ -1,0 +1,15 @@
+def procesar_texto(texto, opcion):
+    if opcion == 1:
+        return f"Transformación 1: {texto.upper()}"
+    elif opcion == 2:
+        return f"Transformación 2: {texto.lower()}"
+    elif opcion == 3:
+        return f"Transformación 3: {texto[::-1]}"
+    else:
+        return "Opción inválida"
+
+
+txt = input("Introduce un texto: ")
+num = int(input("Introduce una opción (1, 2 o 3): "))
+
+print(procesar_texto(txt, num))
