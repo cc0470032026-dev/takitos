@@ -1,0 +1,22 @@
+def transformar_lista(palabras, opcion):
+    lista_transformada = []
+
+    for palabra in palabras:
+        if opcion == 1:
+            lista_transformada.append(palabra.upper())
+        elif opcion == 2:
+            lista_transformada.append(palabra.lower())
+        elif opcion == 3:
+            lista_transformada.append(palabra[::-1])
+        else:
+            return "Opción no válida"
+
+    return lista_transformada
+
+
+mis_palabras = ["Papas", "Con poca", "Salsa"]
+print("Opciones: 1. Mayúsculas, 2. Minúsculas, 3. Invertir")
+seleccion = int(input("Selecciona una opción: "))
+
+resultado = transformar_lista(mis_palabras, seleccion)
+print(f"Lista resultante: {resultado}")
